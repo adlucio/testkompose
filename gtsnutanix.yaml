@@ -13,7 +13,7 @@ spec:
         app: gtsnutanixv1
     spec:
       containers:
-      - name: gtsnutanixv10
+      - name: gtsnutanixv1
         image: docker.io/drupal
         ports:
         - containerPort: 80
