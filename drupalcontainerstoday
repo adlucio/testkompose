@@ -1,0 +1,19 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: drupalcontainerstoday
+spec:
+  selector:
+    matchLabels:
+      app: drupalcontainerstoday
+  replicas: 1 # tells deployment to run 1 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: drupalcontainerstoday
+    spec:
+      containers:
+      - name: drupalcontainerstoday
+        image: poitocontainer/drupalcontainerstoday:v1
+        ports:
+        - containerPort: 80
