@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: gtsnutanixv1
-        image: docker.io/poitocontainer/awsdrupaldbembedded:v2
+        image: docker.io/poitocontainer/awsdrupaldbembedded:v3
         ports:
         - containerPort: 80
