@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: awstoronto
-        image: docker.io/poitocontainer/awstorontords:v1
+        image: docker.io/poitocontainer/awstoronto:v1
         ports:
         - containerPort: 80
