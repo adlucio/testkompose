@@ -1,16 +1,16 @@
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: gtsnutanixv1
+  name: awstorontorolling
 spec:
   selector:
     matchLabels:
-      app: gtsnutanixv1
+      app: awstoronto
   replicas: 8 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
-        app: gtsnutanixv1
+        app: awstorontorolling
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -18,7 +18,7 @@ spec:
       maxUnavailable: 0
     spec:
       containers:
-      - name: gtsnutanixv1
-        image: docker.io/poitocontainer/awsdrupaldbembedded:v2
+      - name: awstorontorolling
+        image: docker.io/poitocontainer/awstoronto:v3
         ports:
         - containerPort: 80
