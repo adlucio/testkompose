@@ -1,0 +1,19 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: rwsdemo
+spec:
+  selector:
+    matchLabels:
+      app: rwsdemo
+  replicas: 10 # tells deployment to run 3 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: rwsdemo
+    spec:
+      containers:
+      - name: rwsdemo
+        image: docker.io/poitocontainer/rwsdemo:v1
+        ports:
+        - containerPort: 80
